@@ -1,0 +1,9 @@
+#maven
+target/*
+#java
+bin/
+.settings/* 
+.classpath
+myapp.log
+.project
+/target/
