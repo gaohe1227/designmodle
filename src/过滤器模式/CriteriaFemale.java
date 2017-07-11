@@ -8,16 +8,14 @@ import java.util.List;
  * @author:高鹤
  * @date:2017年7月11日
  */
-public class CriteriaMale implements Criteria {
-    /**
-     * 过滤取出gender为Female的Person
-     */
+public class CriteriaFemale implements Criteria {
+
 	@Override
 	public List<Person> meetCriteria(List<Person> persons) {
 		// TODO Auto-generated method stub
-	     List<Person> malePersons = new ArrayList<Person>(); 
+		 List<Person> malePersons = new ArrayList<Person>(); 
 	      for (Person person : persons) {
-	         if(person.getGender().equalsIgnoreCase("Female")){
+	         if(person.getGender().equalsIgnoreCase("MALE")){
 	            malePersons.add(person);
 	         }
 	      }
