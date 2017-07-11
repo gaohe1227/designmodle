@@ -2,6 +2,8 @@ package 过滤器模式;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Test {
 
@@ -21,9 +23,13 @@ public class Test {
 		persons.add(new Person("史十", "FEMALE", "SINGLE"));
 		// 打印出所有男性的信息
 		System.out.println("---------------------所有男性---------------------");
+		Long countFemale=	persons.stream().filter(person->person.getGender().equalsIgnoreCase("male")).count();
+		System.out.println(countFemale);
 		List<Person> maleList = new CriteriaMale().meetCriteria(persons);
 		printList(maleList);
-
+		List<Person> maleList1=	persons.stream().filter(person->person.getGender().equalsIgnoreCase("Female")).collect(Collectors.toList());
+		System.out.println("---------------------所有男性---------------------");
+		printList(maleList1);
 		// 打印出所有女性的信息
 		System.out.println("--------------------所有女性-------------------");
 		List<Person> marriedFemaleList = new CriteriaFemale().meetCriteria(persons);
@@ -32,6 +38,9 @@ public class Test {
 		System.out.println("-------------------所有单身男性------------------");
 		List<Person> singleOrFemaleList = new FilterAnd(new CriteriaMale(), new SingleFilter()).meetCriteria(persons);
 		printList(singleOrFemaleList);
+	
+		
+		
 	}
 
 	// 打印列表中的数据信息

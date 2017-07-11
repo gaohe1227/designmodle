@@ -15,7 +15,7 @@ public class CriteriaFemale implements Criteria {
 		// TODO Auto-generated method stub
 		 List<Person> malePersons = new ArrayList<Person>(); 
 	      for (Person person : persons) {
-	         if(person.getGender().equalsIgnoreCase("MALE")){
+	         if(person.getGender().equalsIgnoreCase("FEMALE")){
 	            malePersons.add(person);
 	         }
 	      }
