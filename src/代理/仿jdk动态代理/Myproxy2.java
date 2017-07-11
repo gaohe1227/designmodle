@@ -41,9 +41,9 @@ public class Myproxy2 {
 		}
 		
 
-		String str = "package 设计模式.动态代理;" + rt
+		String str = "package 代理.仿jdk动态代理;" + rt
 				+"import java.lang.reflect.Method;"+rt
-				+"import 设计模式.动态代理.MyImvocationHandle;"+rt
+				+"import 代理.仿jdk动态代理.MyImvocationHandle;"+rt
 				+"public class $Proxy0 implements "+interfaceName.getName()+" {"+rt
 				+ "private "+interfaceName.getName()+" m;"+rt
 				+ "public $Proxy0(MyImvocationHandle m) {" +rt
@@ -52,7 +52,7 @@ public class Myproxy2 {
 				+methodStr 
 				+"private MyImvocationHandle h;"
 				+ "}";
-		String fileName=System.getProperty("user.dir")+"/bin/设计模式/动态代理/$Proxy0.java";//System.getProperty("user.dir")为当前项目所在路径
+		String fileName=System.getProperty("user.dir")+"/bin/代理/仿jdk动态代理/$Proxy0.java";//System.getProperty("user.dir")为当前项目所在路径
 		File sourceFile=new File(fileName);
 		FileUtils.writeStringToFile(sourceFile, str);//将字符串写入指定文件
 		JavaCompiler javaCompiler=ToolProvider.getSystemJavaCompiler();//获取当前系统的编译器
@@ -62,7 +62,7 @@ public class Myproxy2 {
 		task.call();//编译文件
 		fileMgr.close();//关闭文件管理器
 		ClassLoader classLoader=ClassLoader.getSystemClassLoader();//获取类加载器
-		Class c=classLoader.loadClass("设计模式.动态代理.$Proxy0");//将设计模式.动态代理.$Proxy0加载到内存当中
+		Class c=classLoader.loadClass("代理.仿jdk动态代理.$Proxy0");//将设计模式.动态代理.$Proxy0加载到内存当中
 		System.out.println(c.getName());
 		Constructor constructor=c.getConstructor(MyImvocationHandle.class);//获取构造器
 		return constructor.newInstance(myImvocationHandle);//创建代理对象

@@ -19,7 +19,7 @@ public class Myproxy {
 	public static Object newProxyIntstance() throws IOException {
 		String rt = "\r\n";// 换行符
 
-		String str = "package 设计模式.动态代理;" + rt
+		String str = "package 代理.仿jdk动态代理;" + rt
 				+"public class $Proxy0 implements Moveable {"+rt
 
 				+ "public Proxy0(Moveable m) {" +rt
@@ -37,10 +37,10 @@ public class Myproxy {
 				+ "System.out.println(\"汽车结束行驶....  汽车行驶时间：\" + (endtime - starttime) + \"毫秒！\");" +rt
 				+ "}"+rt
 				+ "}";
-		String fileName=System.getProperty("user.dir")+"/bin/设计模式/动态代理/$Proxy0.java";//System.getProperty("user.dir")为当前项目所在路径
+		String fileName=System.getProperty("user.dir")+"/bin/代理/仿jdk动态代理/$Proxy0.java";//System.getProperty("user.dir")为当前项目所在路径
+		System.out.println(fileName);
 		File sourceFile=new File(fileName);
-		FileUtils.writeStringToFile(sourceFile, str);//将字符串写入指定文件
-	 
+		FileUtils.writeStringToFile(sourceFile, str);//将字符串写入指定文件 
 		return str;
 
 	}
