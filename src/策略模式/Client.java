@@ -1,6 +1,6 @@
 package ²ßÂÔÄ£Ê½;
 
-public class StrategyPatternDemo {
+public class Client {
 	public static void main(String[] args) {
 		PersonContext context = new PersonContext(new TrainStrategy());
 		context.executeStrategy();
