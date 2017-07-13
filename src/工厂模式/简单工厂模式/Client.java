@@ -2,7 +2,7 @@ package 工厂模式.简单工厂模式;
 
 import java.util.Scanner;
 
-public class OperationTest {
+public class Client {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

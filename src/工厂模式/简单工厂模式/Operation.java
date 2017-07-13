@@ -1,5 +1,10 @@
 package 工厂模式.简单工厂模式;
-
+/**
+ * 
+ * Description:抽象产品角色
+ * @author:高鹤
+ * @date:2017年7月13日
+ */
 public abstract class Operation {
 	protected double numA;
 
