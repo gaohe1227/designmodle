@@ -3,7 +3,7 @@ package 代理.仿jdk动态代理;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
-public class Test {
+public class Client {
 
 	public static void main(String[] args)
 			throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException,
