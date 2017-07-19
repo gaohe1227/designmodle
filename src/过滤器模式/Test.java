@@ -22,9 +22,10 @@ public class Test {
 		persons.add(new Person("刘九", "FEMALE", "SINGLE"));
 		persons.add(new Person("史十", "FEMALE", "SINGLE"));
 		// 打印出所有男性的信息
-		System.out.println("---------------------所有男性---------------------");
+		System.out.println("---------------------所有男性jdk8---------------------");
 		Long countFemale=	persons.stream().filter(person->person.getGender().equalsIgnoreCase("male")).count();
 		System.out.println(countFemale);
+		System.out.println("---------------------所有男性jdk8---------------------");
 		List<Person> maleList = new CriteriaMale().meetCriteria(persons);
 		printList(maleList);
 		List<Person> maleList1=	persons.stream().filter(person->person.getGender().equalsIgnoreCase("Female")).collect(Collectors.toList());

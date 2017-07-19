@@ -1,5 +1,10 @@
 package 建造者模式;
-
+/**
+ * 
+ * Description:具体构建者
+ * @author:高鹤
+ * @date:2017年7月19日
+ */
 public class ManBuilder implements PersonBuilder {
 
 	Person person;

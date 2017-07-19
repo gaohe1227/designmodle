@@ -1,5 +1,10 @@
 package 建造者模式;
-
+/**
+ * 
+ * Description:指导类;管理构建着
+ * @author:高鹤
+ * @date:2017年7月19日
+ */
 public class PersonDirector {
 	public Person constructPerson(PersonBuilder pb) {
 		pb.buildHead();
@@ -8,11 +13,5 @@ public class PersonDirector {
 		return pb.buildPerson();
 	}
 
-	public static void main(String[] args) {
-		PersonDirector pd = new PersonDirector();
-		Person person = pd.constructPerson(new ManBuilder());
-		System.out.println(person.getBody());
-		System.out.println(person.getFoot());
-		System.out.println(person.getHead());
-	}
+	
 }
