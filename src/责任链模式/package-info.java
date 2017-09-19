@@ -8,4 +8,4 @@
  * @author:高鹤
  * @date:2017年7月11日
  */
-package 责任连模式;
+package 责任链模式;

@@ -1,6 +1,6 @@
 package 模版方法模式;
 
-public class GameTest {
+public class Client {
 	 public static void main(String[] args) {
 
 	      Game game = new Cricket();

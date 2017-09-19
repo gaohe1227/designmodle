@@ -33,10 +33,7 @@ public class Facade {
 		three.methodOne();
 	}
 
-	public static void main(String[] args) {
-		Facade f=new Facade();
-		f.methodA();
-	}
+ 
 }
 
 /**

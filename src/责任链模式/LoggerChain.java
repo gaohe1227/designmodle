@@ -1,4 +1,4 @@
-package 责任连模式;
+package 责任链模式;
 
 public class LoggerChain {
 	private static AbstractLogger getChainOfLoggers() {
